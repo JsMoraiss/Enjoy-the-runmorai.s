@@ -1,0 +1,135 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Megrim&family=Mrs+Saint+Delafield&display=swap');
+
+
+/* Configurações gerais */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("imagens/CAPA\ BARCO.JPEG");
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+}
+
+/* Cabeçalho */
+
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 30px 8%;
+    border-bottom: 1px solid #0b2030;
+}
+
+.logo {
+    color: #E8E5DF;
+    font-size: 24px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    color: #AEB3B6;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.menu a:hover {
+    color: white;
+}
+
+/* Página inicial */
+
+.inicio {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 20px 30px;
+}
+
+
+.subtitulo {
+    font-size: 12px;
+    letter-spacing: 3px;
+    color: #AEB3B6;
+}
+
+h1 {
+    font-family: 'Mrs Saint Delafield', cursive;
+    font-size: clamp(42px, 6vw, 80px);
+    font-weight: normal;
+    color: #000000;
+    line-height: 1.2;
+    margin-top: 25px;
+}
+
+h1 em {
+    font-weight: normal;
+}
+
+.descricao {
+    font-family: "Megrim", system-ui;
+    color: #fdfdfd;
+    font-size: 30px;
+    margin-top: 25px;
+    line-height: 1.7;
+}
+
+.foto-capa {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    margin-top: 40px;
+}
+
+/* QUEM SOU EU */
+
+.quemsoueu {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    padding: 80px;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(02px);
+    color: white;
+}
+
+.sobre-foto img {
+    width: 350px;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+}
+
+@media (max-width: 600px) {
+    .cabecalho {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .menu {
+        gap: 16px;
+    }
+
+    .inicio {
+        padding: 60px 20px;
+    }
+
+    .foto-capa {
+        height: 280px;
+    }
+}
