@@ -1,9 +1,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Mrs+Saint+Delafield&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Megrim&family=Mrs+Saint+Delafield&display=swap');
-@import url('https://www.dafont.com/pt/white-buttell.font?text=Entre+o+que+vejo+e+o+que+sinto.&back=author');
-
-/* Configurações gerais */
 
 * {
     margin: 0;
@@ -206,5 +203,7 @@ h1 em {
     .rodape-final {
         flex-direction: column;
         margin-top: 56px;
+        align-items: center;
+        gap: 16px;
     }
 }
