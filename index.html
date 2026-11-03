@@ -22,10 +22,10 @@
 
     <main>
         <section class="inicio">
-            <p class="subtitulo">UM ARQUIVO PESSOAL — 2026</p>
+            <p class="subtitulo">ARQUIVO PESSOAL — 2026</p>
 
             <h1>
-                <em>Entre o que vejo <br>e o que sinto.</em>
+                <em>Enjoy the run!</em>
             </h1>
 
             <p class="descricao">
@@ -33,7 +33,7 @@
             </p>
         </section>
 
-        <section class="quemsoueu">
+        <section class="quemsoueu revelar">
 
             <div class="sobre-foto">
                 <img src="imagens/QUEM SOU EU.JPEG">
@@ -51,11 +51,14 @@
 
         </section>
 
-        <section class="escrita atlas">
-
+        <section id="escrita" class="revelar">
+            <h1 class="atlas1">atlas veio à esse mundo com um propósito, mudar toda a visão existente, julgam tanto o lado no qual ele defendeu mas, quem sabe, por X motivos, se foi contada a história certa. 1º pecador?</h1>
+                
         </section>
 
+
         <footer class="rodape">
+            
             <p class="despedida">UM ESPAÇO ABERTO</p>
         
         <div class="rodape-final">
@@ -68,5 +71,21 @@
 
     </main>
 
+        <script>
+            document.documentElement.classList.add("animacoes");
+
+            const observador = new IntersectionObserver((entradas) => {
+                entradas.forEach((entrada) => {
+                    if (entrada.isIntersecting) {
+                        entrada.target.classList.add("visivel");
+                        observador.unobserve(entrada.target);
+                    }
+                });
+            }, { threshold: 0.15 });
+
+            document.querySelectorAll(".revelar").forEach((secao) => {
+                observador.observe(secao);
+            });
+        </script>
 </body>
 </html> 
